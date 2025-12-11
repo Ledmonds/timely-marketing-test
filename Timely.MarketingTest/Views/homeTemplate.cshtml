@@ -1,0 +1,9 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	Layout = null;
+}
+
+@await Component.InvokeAsync("Tags", new { propertyName = "tags" })
+@await Component.InvokeAsync("Pokemon", new { count = 10 })
+@await Component.InvokeAsync("PublishedContent")

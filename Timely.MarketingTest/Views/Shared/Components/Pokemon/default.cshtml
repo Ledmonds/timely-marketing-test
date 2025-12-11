@@ -1,0 +1,26 @@
+﻿@model IReadOnlyList<PokemonDto>
+@using Timely.MarketingTest.Models
+
+<h2>Pokemon</h2>
+<div class="umb-block-list">
+    @{
+        <table>
+            <tr>
+                <th>@nameof(PokemonDto.Name)</th>
+                <th>@nameof(PokemonDto.Height)</th>
+                <th>@nameof(PokemonDto.Weight)</th>
+                <th>@nameof(PokemonDto.Species)</th>
+            </tr>
+        
+        @foreach (var pokemon in Model)
+        {
+            <tr>
+                <td>@pokemon.Name</td>
+                <td>@pokemon.Height</td>
+                <td>@pokemon.Weight</td>
+                <td>@pokemon.Species</td>
+            </tr>
+        }
+        </table>
+    }
+</div>
